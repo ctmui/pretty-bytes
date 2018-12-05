@@ -13,6 +13,8 @@
 		"node": ">=6"
 	},
 	"scripts": {
+		"release": "npm version",
+		"postrelease": "npm publish && git push origin HEAD --follow-tags",
 		"test": "xo && NODE_ICU_DATA=node_modules/full-icu ava"
 	},
 	"files": [
